@@ -1,0 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2&display=swap');
+
+@mixin min-width($size) {
+    @media (min-width:$size) {
+        @content;
+    }
+}

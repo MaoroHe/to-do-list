@@ -1,0 +1,21 @@
+@import "./usefull/_variable.scss";
+@import "./usefull/_mixin.scss";
+
+html {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@import "./list/_list.scss";
+@import "./create/_create.scss";
+
+// .darkmode {
+    
+// }

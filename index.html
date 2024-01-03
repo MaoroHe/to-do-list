@@ -8,13 +8,25 @@
     <title>My To-Do-List</title>
 </head>
 <body>
-    
-    <details><summary>Dropdown</summary>
-    <ul>
-        <li>1</li>
-        <li>1</li>
-        <li>1</li>
-    </ul></details>
+    <header>
+        <section class="create">
+            <button id="newTask">New Task</button>
+            <button id="clearAll">Clear All</button>
+            <!-- <button id="darkmode"></button> -->
+        </section>
 
+        <div id="entry">
+            <form>
+                <label for="name">What's your task? </label>
+                <input type="text" name="taskName" id="taskName" required/>
+                <button type="submit" id="submit">Submit</button>
+            </form>
+        </div>
+    </header>
+    <main id="main">
+        <section class="taskList">
+            <ul class="taskUl"></ul>
+        </section>
+    </main>
 </body>
 </html>
