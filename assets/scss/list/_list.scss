@@ -1,0 +1,48 @@
+.switch {
+	display: inline-block;
+	position: relative;
+	width: 70px;
+	height: 40px;
+	cursor: pointer;
+	overflow: hidden;
+    align-self: flex-start;
+
+    input {
+        position: absolute;
+        top: -30px;
+        left: -30px;
+        width: 0;
+        height: 0;
+    }
+
+    input + span {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: #99b4df;
+        border-radius: 20px;
+   }
+
+    input:checked + span {
+        background-color: #346abf;
+    }
+    input + span:before {
+        content: "";
+        display: inline-block;
+        position: absolute;
+        top: 50%;
+        left: 4px;
+        width: 32px;
+        height: 32px;
+        background: white;
+        border-radius: 50%;
+        transform: translateY(-50%);
+        transition: all .5s;
+    }
+
+    input:checked + span:before {
+        left: 34px;
+    }
+}

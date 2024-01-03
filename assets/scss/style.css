@@ -4,11 +4,59 @@ html {
   align-items: center;
   justify-content: center;
 }
-
-header {
+html body {
+  transition: all 200ms ease-in-out;
+}
+html header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+}
+
+.switch {
+  display: inline-block;
+  position: relative;
+  width: 70px;
+  height: 40px;
+  cursor: pointer;
+  overflow: hidden;
+  align-self: flex-start;
+}
+.switch input {
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  width: 0;
+  height: 0;
+}
+.switch input + span {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #99b4df;
+  border-radius: 20px;
+}
+.switch input:checked + span {
+  background-color: #346abf;
+}
+.switch input + span:before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 4px;
+  width: 32px;
+  height: 32px;
+  background: white;
+  border-radius: 50%;
+  transform: translateY(-50%);
+  transition: all 0.5s;
+}
+.switch input:checked + span:before {
+  left: 34px;
 }
 
 .create {
@@ -73,11 +121,23 @@ header {
   border-radius: 25px;
   padding: 10px;
   box-shadow: transparent 0 0 0 3px, rgba(18, 18, 18, 0.1) 0 6px 20px;
-  transition: box-shadow 250ms;
   font-family: "Exo 2", sans-serif;
+  transition: all 200ms ease-in-out;
+  align-items: center;
+}
+@media (min-width: 1200px) {
+  .enter {
+    margin-top: 160px;
+    width: 600px;
+  }
 }
 .enter:hover {
   box-shadow: #121212 0 0 0 3px, transparent 0 0 0 0;
+}
+.enter form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 #submit {
@@ -165,6 +225,10 @@ header {
   justify-content: center;
 }
 #main .taskUl {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
   list-style: none;
   padding-left: 0%;
 }
@@ -175,6 +239,7 @@ header {
   align-items: center;
   font-size: 18px;
   font-family: "Playfair Display", serif;
+  text-wrap: no-wrap;
 }
 #main .taskUl .taskObject .delBtn {
   background-color: transparent;
@@ -208,4 +273,14 @@ header {
 }
 #main input[type=checkbox]:checked {
   accent-color: green;
+}
+
+.darkmode {
+  transition: all 200ms ease-in-out;
+  background-color: #404258;
+  color: white;
+}
+.darkmode .enter {
+  background-color: #474E68;
+  transition: all 200ms ease-in-out;
 }/*# sourceMappingURL=style.css.map */

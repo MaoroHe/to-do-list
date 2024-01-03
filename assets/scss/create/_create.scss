@@ -60,9 +60,22 @@
     box-shadow: transparent 0 0 0 3px,rgba(18, 18, 18, .1) 0 6px 20px;
     transition: box-shadow 250ms,-webkit-box-shadow 300ms;
     font-family: 'Exo 2', sans-serif;
+    transition: all 200ms ease-in-out;
+    align-items: center;
+
+    @include min-width($desktop) {
+        margin-top: 160px;
+        width: 600px;
+    }
 
     &:hover {
         box-shadow: #121212 0 0 0 3px, transparent 0 0 0 0;
+    }
+
+    form {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
     }
 }
 
@@ -156,6 +169,10 @@
     justify-content: center;
 
     .taskUl {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
         list-style: none;
         padding-left: 0%;
         .taskObject {
@@ -164,6 +181,7 @@
             align-items: center;
             font-size: 18px;
             font-family: 'Playfair Display', serif;
+            text-wrap: no-wrap;
 
             .delBtn {
                 background-color: transparent;
