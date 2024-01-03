@@ -159,12 +159,41 @@
         list-style: none;
         padding-left: 0%;
         .taskObject {
+            display: flex;
             width: fit-content;
+            align-items: center;
+            font-size: 18px;
+            font-family: 'Playfair Display', serif;
+
+            .delBtn {
+                background-color: transparent;
+                border: transparent;
+                cursor: pointer;
+                background-image: url('/assets/img/bxs-trash.svg');
+                background-size: cover;
+                background-position: center;
+                height: 16px;
+                width: 16px;
+                margin-left: 8px;
+                margin-top: 0px;
+                transition: all 150ms linear;
+
+                &:hover {
+                    filter: invert(22%) sepia(71%) saturate(5695%) hue-rotate(353deg) brightness(91%) contrast(128%);
+                    animation-name: poubelle;
+                    animation-duration: 625ms;
+                    animation-iteration-count: infinite;
+                    @keyframes poubelle {
+                        25% {transform: rotate(30deg);}
+                        75% {transform: rotate(-30deg);}
+                    }
+                }
+            }
         }
     }
 
     input[type=checkbox] {
-        margin-right: 8px;
+        margin-right: 9px;
     }
 
     input[type=checkbox]:checked {

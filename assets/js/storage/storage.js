@@ -11,6 +11,8 @@ export function createTask() {
         const liText = document.createTextNode(task.task);
         const checkBox = document.createElement('input');
         const delBtn = document.createElement('button');
+        // const trash = '../to-do-list/assets/img/bxs-trash.svg';
+        // const divBack = document.createElement('div');
 
         checkBox.type = 'checkbox';
         liCreator.appendChild(checkBox);
@@ -21,6 +23,8 @@ export function createTask() {
         parentUl.appendChild(liCreator);
         liCreator.appendChild(delBtn);
         delBtn.className = 'delBtn';
+        // delBtn.appendChild(divBack);
+        // divBack.style.backgroundImage = trash;
 
         // gère l'état des checkbox, vérifie si la valeur retour est true l'état est égal a true.
         checkBox.addEventListener('change', (event) => {

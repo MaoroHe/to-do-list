@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Exo+2&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Exo+2&family=Playfair+Display:wght@500&display=swap");
 html {
   display: flex;
   align-items: center;
@@ -169,11 +169,42 @@ header {
   padding-left: 0%;
 }
 #main .taskUl .taskObject {
+  display: flex;
   width: -moz-fit-content;
   width: fit-content;
+  align-items: center;
+  font-size: 18px;
+  font-family: "Playfair Display", serif;
+}
+#main .taskUl .taskObject .delBtn {
+  background-color: transparent;
+  border: transparent;
+  cursor: pointer;
+  background-image: url("/assets/img/bxs-trash.svg");
+  background-size: cover;
+  background-position: center;
+  height: 16px;
+  width: 16px;
+  margin-left: 8px;
+  margin-top: 0px;
+  transition: all 150ms linear;
+}
+#main .taskUl .taskObject .delBtn:hover {
+  filter: invert(22%) sepia(71%) saturate(5695%) hue-rotate(353deg) brightness(91%) contrast(128%);
+  animation-name: poubelle;
+  animation-duration: 625ms;
+  animation-iteration-count: infinite;
+}
+@keyframes poubelle {
+  25% {
+    transform: rotate(30deg);
+  }
+  75% {
+    transform: rotate(-30deg);
+  }
 }
 #main input[type=checkbox] {
-  margin-right: 8px;
+  margin-right: 9px;
 }
 #main input[type=checkbox]:checked {
   accent-color: green;
